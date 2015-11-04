@@ -4,6 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -11,7 +14,26 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //TextView s;
+       // s = (TextView) findViewById(R.id.text_summer);
+
+        //TextView w;
+        //w = (TextView) findViewById(R.id.text_summer);
+
     }
+
+    public void onSummerClicked(View view){
+        ImageView summerView = (ImageView) findViewById(R.id.image_season);
+        summerView.setImageResource(R.drawable.summer);
+    }
+
+
+    public void onWinterClicked(View view){
+        ImageView winterView = (ImageView) findViewById(R.id.image_season);
+        winterView.setImageResource(R.drawable.winter);
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -1,11 +1,50 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffe571"
+    tools:context=".MainActivity">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
+    <ImageView
+        android:id="@+id/image_season"
+        android:src="@drawable/seasons"
+        android:scaleType="fitXY"
+        android:background="#FF0000"
+        android:layout_marginTop="90dp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" />
+
+    <TextView
+
+        android:onClick="onSummerClicked"
+        android:text="Summer"
+        android:textColor="#FFF000"
+        android:textSize="50sp"
+        android:background="#ff2e33"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="bottom|left"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-</RelativeLayout>
+    <TextView
+        android:onClick="onWinterClicked"
+        android:text="Winter"
+        android:textColor="#ffffff"
+        android:textSize="50sp"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="30dp"
+        android:background="#4ee2ff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="Change the season"
+        android:textStyle="bold|italic"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</FrameLayout>
